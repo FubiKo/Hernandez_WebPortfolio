@@ -179,7 +179,7 @@ nav ul li a:hover::after {
   transition: width 0.3s ease-in-out;
 }
 
-/* Home */
+/* 🌸 Home Section */
 .home-container {
   display: flex;
   align-items: center;
@@ -187,6 +187,7 @@ nav ul li a:hover::after {
   padding: 80px 10%;
   animation: fadeInUp 1s ease-in-out;
   border-bottom: 2px solid #f8d7da;
+  gap: 40px;
 }
 
 @keyframes fadeInUp {
@@ -200,7 +201,6 @@ nav ul li a:hover::after {
   border-radius: 50%;
   border: 5px solid #c2185b;
   box-shadow: 0 0 25px #c2185b;
-  margin-right: 50px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 .profile-pic img:hover {
@@ -258,6 +258,48 @@ nav ul li a:hover::after {
 .btn:hover {
   background: pink;
   transform: translateY(-3px);
+}
+
+/* 📱 Responsive Home Section */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column; /* stack vertically */
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .profile-pic img {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px auto;
+  }
+
+  .intro h1 {
+    font-size: 24px;
+  }
+
+  .intro h2 {
+    font-size: 18px;
+  }
+
+  .intro p {
+    max-width: 100%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 20px;
+  }
+
+  .intro h2 {
+    font-size: 16px;
+  }
+
+  .intro p {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 600px) {
